@@ -1,0 +1,25 @@
+@import '../../styles/styles';
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  .showcase__left {
+    padding: 1rem;
+    img {
+      max-width: 1000px;
+      width: 100%;
+      position: relative;
+      z-index: -10;
+    }
+  }
+  .showcase__right {
+    img {
+      position: absolute;
+      top: 10%;
+      right: 1%;
+      border-radius: 50%;
+      width: 180px;
+      z-index: -15;
+    }
+  }
+}
