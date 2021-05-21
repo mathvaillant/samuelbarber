@@ -5,12 +5,12 @@
   font-family: $PrimaryFont;
 }
 
-.scheduler {
+.work {
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 0.2rem 0.5rem;
-  margin: 1rem;
+  margin: 4rem 1rem 1rem 1rem;
 
   background: #141414;
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.5);
@@ -24,7 +24,7 @@
     margin: auto;
     margin-top: -15px;
   }
-  .scheduler__calendar {
+  .Work {
     height: 300px;
   }
 }

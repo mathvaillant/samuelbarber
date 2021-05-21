@@ -3,10 +3,13 @@
 * {
   color: white;
   font-family: $PrimaryFont;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .aboutme {
   display: flex;
+  justify-content: space-between;
   margin: -2rem 1rem 1rem 1rem;
   padding: 0.2rem 0.5rem;
   width: 75%;
@@ -27,6 +30,7 @@
 
   .pole {
     margin-top: auto;
+    margin-left: auto;
 
     img {
       padding: 0.1rem;
