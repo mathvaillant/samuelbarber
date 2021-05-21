@@ -1,0 +1,18 @@
+@import '../../styles/styles';
+
+* {
+  color: white;
+  font-family: $PrimaryFont;
+}
+
+.scheduler {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem 0.5rem;
+  margin: 1rem;
+
+  background: #141414;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
