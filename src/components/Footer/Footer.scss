@@ -4,3 +4,84 @@
   color: white;
   font-family: $PrimaryFont;
 }
+
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  background: #8e8e8e;
+
+  h1 {
+    font-weight: 100;
+    font-style: italic;
+  }
+  img {
+    width: 50px;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: -25px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    label {
+    }
+    input,
+    textarea {
+      margin: 0 auto;
+      margin-bottom: 0.6rem;
+      max-width: 400px;
+      min-width: 300px;
+      border: none;
+      border-radius: 0.2rem;
+      padding: 0.4rem;
+      box-shadow: $DarkShadow;
+      &:focus-visible {
+        outline: none;
+        color: black;
+      }
+    }
+
+    button {
+      @extend .blackBtn;
+      margin: auto;
+      font-size: larger;
+      padding: 0.6rem 2rem;
+    }
+  }
+
+  div {
+    margin-top: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    small {
+      font-weight: 500;
+      @extend .blackBtn;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        margin: auto 0.4rem;
+        a {
+          img {
+            margin-top: 1rem;
+            width: 25px;
+            box-shadow: $DarkShadow;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  h5 {
+    background-color: #000;
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+}
