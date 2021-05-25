@@ -1,30 +1,185 @@
 @import '../../styles/styles';
 
-* {
-  color: white;
-  font-family: $PrimaryFont;
-}
-
 .scheduler {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 0.2rem 0.5rem;
+  align-items: center;
+  padding: 1rem 1rem;
   margin: 1rem;
 
-  background: #141414;
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   h1 {
     font-weight: 100;
     font-style: italic;
+    color: white;
+    font-family: $PrimaryFont;
   }
   img {
     width: 50px;
     margin: auto;
     margin-top: -15px;
   }
-  .scheduler__calendar {
-    height: 300px;
+
+  h4 {
+    text-align: start;
+    margin-bottom: -10px;
+  }
+
+  .scheduler__inner {
+    box-shadow: $DarkShadow;
+    min-width: 350px;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgb(39, 39, 39);
+
+    .book {
+      @extend .blackBtn;
+      background-color: green;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 30px;
+        position: relative;
+        left: 45%;
+        margin: 0 !important;
+        @extend .blackBtn;
+        padding: 1rem;
+      }
+      #file {
+        opacity: 0;
+      }
+    }
+    input,
+    textarea {
+      background-color: black;
+      margin: 0 auto;
+      margin-bottom: 0.6rem;
+      border: none;
+      border-radius: 0.2rem;
+      padding: 0.2rem;
+      box-shadow: $DarkShadow;
+      color: white;
+      &:focus-visible {
+        outline: none;
+        color: white;
+      }
+    }
+
+    .react-date-picker,
+    .react-datetime-picker,
+    .datePicker {
+      box-shadow: $DarkShadow;
+      padding: 0.2rem 0.6rem;
+      background: black;
+      display: flex;
+      position: relative;
+      width: auto;
+      border-radius: 5px;
+
+      &--disabled {
+        background-color: rgb(240, 240, 240);
+        color: rgb(109, 109, 109);
+      }
+
+      &__wrapper {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        border: none !important;
+      }
+
+      &__inputGroup {
+        flex-grow: 1;
+        padding: 0 2px;
+        box-sizing: content-box;
+
+        &__divider {
+          padding: 1px 0;
+          white-space: pre;
+          color: white;
+        }
+
+        &__input {
+          color: white;
+          height: 100%;
+          position: relative;
+          padding: 0 1px;
+          border: 0;
+          background: none;
+          font: inherit;
+          font-size: 1rem;
+          box-sizing: content-box;
+          font-size: 1rem;
+          font-weight: 600;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          &:invalid {
+            background: fade(red, 10%);
+          }
+        }
+      }
+
+      &__button {
+        border: 0;
+        background: transparent;
+        padding: 4px 6px;
+
+        &:enabled {
+          cursor: pointer;
+
+          &:hover,
+          &:focus {
+            .react-date-picker__button__icon {
+              stroke: rgb(0, 120, 215);
+            }
+          }
+        }
+
+        &:disabled {
+          .react-date-picker__button__icon {
+            stroke: rgb(109, 109, 109);
+          }
+        }
+
+        svg {
+          display: inherit;
+          stroke: white;
+        }
+      }
+
+      &__calendar {
+        width: 100%;
+        max-width: auto;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+
+        &--closed {
+          display: none;
+        }
+
+        .react-calendar {
+          border-width: thin;
+          background-color: black;
+          .react-calendar__tile:disabled {
+            background-color: grey;
+          }
+          .react-calendar__tile--now:enabled {
+            background-color: rgb(255, 0, 0);
+          }
+        }
+      }
+    }
   }
 }
