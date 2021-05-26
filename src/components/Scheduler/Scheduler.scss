@@ -37,6 +37,14 @@
     .book {
       @extend .blackBtn;
       background-color: green;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 1rem;
+        width: 20px;
+        margin-top: 0;
+      }
     }
     form {
       display: flex;
