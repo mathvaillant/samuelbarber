@@ -3,3 +3,8 @@
 body {
   background-color: $darkgrey;
 }
+
+html,
+body {
+  scroll-behavior: smooth;
+}
