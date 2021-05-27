@@ -5,12 +5,20 @@
   font-family: $PrimaryFont;
 }
 
+.machine {
+  width: 200px;
+  position: relative;
+  margin: -6rem auto -10rem auto;
+  z-index: 100;
+}
 .footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
-  background: #8e8e8e;
+
+  background: $darkgrey;
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  padding-top: 10rem;
 
   h1 {
     font-weight: 100;
@@ -45,9 +53,10 @@
 
     button {
       @extend .blackBtn;
+      background-color: rgb(207, 41, 35);
       margin: auto;
-      font-size: larger;
-      padding: 0.6rem 2rem;
+      font-size: 1rem;
+      padding: 0.2rem 0.6rem;
     }
   }
 

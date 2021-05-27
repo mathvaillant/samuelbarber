@@ -1,6 +1,7 @@
 import React from 'react'
 import Samuel from '../../images/3.png'
-import Logo from '../../images/logo.jpg'
+import Logo from '../../images/altLogo.png'
+
 import './Showcase.scss'
 
 const Showcase = () => {
@@ -13,7 +14,7 @@ const Showcase = () => {
         <span id='blue2'></span>
       </div>
       <div className='showcase__right'>
-        <img src={Logo} alt='' />
+        <img src={Logo} alt='' className='logo' />
       </div>
     </div>
   )

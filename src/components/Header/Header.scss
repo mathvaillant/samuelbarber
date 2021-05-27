@@ -2,37 +2,44 @@
 
 .Header {
   background-color: #000;
-  color: white;
-  padding: 0 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  img {
-    width: auto;
-    height: 58px;
-    border-radius: 50%;
-  }
-  ul {
+  .row {
+    background-color: #000;
+    color: white;
+    padding: 0 0.5rem;
     display: flex;
-    align-items: center;
-    li {
-      list-style: none;
-      margin: 0 1rem;
-      a {
-        text-decoration: none;
-        color: white;
-        font-family: $PrimaryFont;
-        &:hover {
-          text-decoration: underline solid 1px white;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-width: 1200px;
+    margin: auto;
+    img {
+      width: auto;
+      height: 58px;
+      border-radius: 50%;
+      margin-left: 1rem;
+    }
+    ul {
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+      li {
+        list-style: none;
+        margin: 0 1rem;
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: $PrimaryFont;
+          &:hover {
+            text-decoration: underline solid 1px white;
+          }
         }
-      }
-      span {
-        margin: 0 3px;
-        img {
-          width: 23px;
-          height: auto;
+        span {
+          margin: 0 3px;
+          img {
+            width: 23px;
+            height: auto;
+          }
         }
       }
     }

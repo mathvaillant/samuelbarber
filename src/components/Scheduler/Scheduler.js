@@ -4,6 +4,8 @@ import Barb from '../../images/mustache.png'
 import WhatsApp from '../../images/whatsapp.png'
 import DateTimePicker from 'react-datetime-picker'
 
+import Scissors from '../../images/b4.png'
+
 const Scheduler = () => {
   const [date, setDate] = useState(new Date())
   const [time, setTime] = useState('')
@@ -42,7 +44,7 @@ const Scheduler = () => {
   }
 
   return (
-    <div className='scheduler'>
+    <div className='scheduler' id='agendar'>
       <h1>Agendamentos</h1>
       <img src={Barb} alt='bar.png' />
       <div className='scheduler__inner'>
@@ -83,6 +85,7 @@ const Scheduler = () => {
           </button>
         </form>
       </div>
+      <img src={Scissors} alt='' className='scissors' />
     </div>
   )
 }

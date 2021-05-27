@@ -7,6 +7,9 @@
   align-items: center;
   padding: 1rem 1rem;
   margin: 1rem;
+  margin-top: -4rem;
+  z-index: 10;
+  background-color: $darkgrey;
 
   box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -28,7 +31,8 @@
 
   .scheduler__inner {
     box-shadow: $DarkShadow;
-    min-width: 350px;
+    max-width: 700px;
+    width: -webkit-fill-available;
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 5px;
@@ -193,5 +197,14 @@
         }
       }
     }
+  }
+  .scissors {
+    position: relative;
+    bottom: -10rem;
+    transform: rotate(45deg);
+    left: -8rem;
+    width: 70%;
+    z-index: 10;
+    margin-top: -10rem;
   }
 }

@@ -7,18 +7,16 @@ import EN from '../../images/usa.png'
 const Header = () => {
   return (
     <div className='Header'>
-      <img src={Logo} alt='logo.jpg' />
-      <ul>
-        <li>
-          <a href='#agendar'>Agendar</a>
-        </li>
-        <li>
-          <a href='#trabalhos'>Trabalhos</a>
-        </li>
-        <li>
-          <a href='#contacto'>Contacto</a>
-        </li>
-        {/* <li>
+      <div className='row'>
+        <img src={Logo} alt='logo.jpg' />
+        <ul>
+          <li>
+            <a href='#agendar'>Agendar</a>
+          </li>
+          <li>
+            <a href='#trabalhos'>Trabalhos</a>
+          </li>
+          {/* <li>
           <span>
             <img src={PT} alt='' />
           </span>
@@ -26,7 +24,8 @@ const Header = () => {
             <img src={EN} alt='' />
           </span>
         </li> */}
-      </ul>
+        </ul>
+      </div>
     </div>
   )
 }

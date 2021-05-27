@@ -3,23 +3,63 @@
 .showcase {
   display: flex;
   flex-direction: column;
+  background-color: $darkgrey;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+
   .showcase__left {
     padding: 1rem;
     img {
       max-width: 1000px;
       width: 100%;
       position: relative;
-      z-index: -10;
+      z-index: 4;
     }
   }
   .showcase__right {
-    img {
+    .logo {
       position: absolute;
-      top: 10%;
-      right: 1%;
-      border-radius: 50%;
-      width: 180px;
-      z-index: -15;
+      top: 4%;
+      right: -3%;
+      width: 62%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .showcase {
+    .showcase__right {
+      .logo {
+        width: 200px;
+        top: 6%;
+        right: 0%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .showcase {
+    .showcase__right {
+      .logo {
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .showcase {
+    .showcase__right {
+      .logo {
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .showcase {
+    .showcase__right {
+      .logo {
+      }
     }
   }
 }

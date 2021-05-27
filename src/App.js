@@ -8,14 +8,16 @@ import Work from './components/Work/Work'
 
 function App() {
   return (
-    <div className='App'>
+    <>
       <Header />
-      <Showcase />
-      <AboutMe />
-      <Scheduler />
-      <Work />
-      <Footer />
-    </div>
+      <div className='App'>
+        <Showcase />
+        <AboutMe />
+        <Scheduler />
+        <Work />
+        <Footer />
+      </div>
+    </>
   )
 }
 
