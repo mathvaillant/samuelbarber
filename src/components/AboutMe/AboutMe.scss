@@ -15,11 +15,11 @@
   z-index: 1;
   .saw {
     position: absolute;
-    margin-top: -7rem;
+    margin-top: -4rem;
     transform: rotate(30deg);
     right: 0;
-    max-width: 260px;
-    z-index: 1;
+    width: 230px;
+    z-index: -1;
   }
   .pole {
     display: flex;
@@ -31,7 +31,7 @@
     }
   }
   .left {
-    margin-top: -2rem;
+    margin-top: 2rem;
     img {
       margin-top: 4rem;
       border-radius: 50%;
@@ -64,6 +64,33 @@
       margin: 0;
       font-weight: 700;
       font-size: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .aboutme {
+    .saw {
+      right: 10%;
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .aboutme {
+    .saw {
+      right: 15%;
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .aboutme {
+    .saw {
+      right: 22%;
+      width: 300px;
     }
   }
 }

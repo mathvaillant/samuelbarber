@@ -18,9 +18,10 @@
   .showcase__right {
     .logo {
       position: absolute;
-      top: 4%;
-      right: -3%;
-      width: 62%;
+      top: 3%;
+      right: -10%;
+      max-width: 340px;
+      z-index: 1000;
     }
   }
 }
@@ -29,8 +30,20 @@
   .showcase {
     .showcase__right {
       .logo {
-        width: 200px;
-        top: 6%;
+        width: 300px;
+        top: 3%;
+        right: -9%;
+      }
+    }
+  }
+}
+
+@media (min-width: 680px) {
+  .showcase {
+    .showcase__right {
+      .logo {
+        width: 330px;
+        top: 7%;
         right: 0%;
       }
     }
@@ -41,24 +54,45 @@
   .showcase {
     .showcase__right {
       .logo {
+        right: 0%;
+        width: 330px;
+        top: 10%;
       }
     }
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 970px) {
   .showcase {
     .showcase__right {
       .logo {
+        position: absolute;
+        right: 10%;
+        width: 370px;
       }
     }
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1325px) {
   .showcase {
     .showcase__right {
       .logo {
+        position: absolute;
+        right: 17%;
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1597px) {
+  .showcase {
+    .showcase__right {
+      .logo {
+        position: absolute;
+        right: 22%;
+        width: 400px;
       }
     }
   }

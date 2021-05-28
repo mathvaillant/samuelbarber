@@ -8,10 +8,7 @@ const Showcase = () => {
   return (
     <div className='showcase'>
       <div className='showcase__left'>
-        <img src={Samuel} alt='' />
-        <span id='blue1'></span>
-        <span id='red'></span>
-        <span id='blue2'></span>
+        <img src={Samuel} alt='' className='barber' />
       </div>
       <div className='showcase__right'>
         <img src={Logo} alt='' className='logo' />
