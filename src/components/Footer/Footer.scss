@@ -8,7 +8,7 @@
 .machine {
   width: 200px;
   position: relative;
-  margin: -6rem auto -10rem auto;
+  margin: -6rem 25% -10rem 20%;
   z-index: 100;
 }
 .footer {
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
 
-  background: $darkgrey;
+  background: black;
   clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
   padding-top: 10rem;
 
@@ -58,6 +58,7 @@
       margin: auto;
       font-size: 1rem;
       padding: 0.2rem 0.6rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -71,27 +72,28 @@
       font-size: 1rem;
       @extend .blackBtn;
     }
-
-    ul {
-      display: flex;
-      padding: 0;
-      li {
-        list-style: none;
-        margin: auto 0.4rem;
-        a {
-          img {
-            margin-top: 1rem;
-            width: 30px;
-            box-shadow: $DarkShadow;
-            border-radius: 50%;
-          }
-        }
-      }
-    }
   }
-  h5 {
-    background-color: #000;
+  a {
+    background-color: $darkgrey;
     padding: 1rem;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .machine {
+    margin: -6rem 25% -10rem 35%;
+  }
+}
+
+@media (min-width: 800px) {
+  .machine {
+    margin: -6rem 25% -10rem 35%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .machine {
+    margin: -6rem 25% -10rem 45%;
   }
 }

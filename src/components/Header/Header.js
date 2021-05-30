@@ -1,8 +1,8 @@
 import React from 'react'
 import './Header.scss'
 import Logo from '../../images/logo.jpg'
-import PT from '../../images/portugal.png'
-import EN from '../../images/usa.png'
+import Facebook from '../../images/fb.png'
+import Instagram from '../../images/ins.png'
 
 const Header = () => {
   return (
@@ -16,14 +16,14 @@ const Header = () => {
           <li>
             <a href='#trabalhos'>Trabalhos</a>
           </li>
-          {/* <li>
-          <span>
-            <img src={PT} alt='' />
-          </span>
-          <span>
-            <img src={EN} alt='' />
-          </span>
-        </li> */}
+          <li>
+            <a href='#'>
+              <img src={Facebook} alt='' />
+            </a>
+            <a href='#'>
+              <img src={Instagram} alt='' />
+            </a>
+          </li>
         </ul>
       </div>
     </div>

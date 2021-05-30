@@ -9,14 +9,14 @@ import Work from './components/Work/Work'
 function App() {
   return (
     <>
+      <Showcase />
       <Header />
       <div className='App'>
-        <Showcase />
         <AboutMe />
         <Scheduler />
         <Work />
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }

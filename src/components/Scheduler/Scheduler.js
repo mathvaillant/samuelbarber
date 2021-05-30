@@ -9,8 +9,9 @@ import Scissors from '../../images/b4.png'
 const Scheduler = () => {
   const [date, setDate] = useState(new Date())
   const [time, setTime] = useState('')
-  const [day, setDay] = useState('')
   const [name, setName] = useState('')
+  const [day, setDay] = useState('')
+  const [observations, setObservations] = useState('')
   const [address, setAddress] = useState('')
 
   const onChange = (date) => {
@@ -34,8 +35,9 @@ const Scheduler = () => {
       let newTime = time
       let newDay = day
       let newAddress = address
+      let Obs = observations !== '' ? 'Obs: ' + observations : null
       let clientName = name
-      let message = `Olá Samuel, como está? Gostava de agendar um corte para o dia ${newDay} às ${newTime} ${newAddress}. Fico a aguardar uma confirmação, Obrigado! ${clientName}`
+      let message = `Olá Samuel, como está? Gostava de agendar um corte para o dia ${newDay} às ${newTime} horas. De preferência na ${newAddress}. Fico a aguardar uma confirmação, Obrigado! ${clientName}. ${Obs}`
       const location = window.location
       location.replace(
         `https://api.whatsapp.com/send?phone=+351963007246&text=${message}&source=&data=&app_absent=`
@@ -71,13 +73,20 @@ const Scheduler = () => {
             id='where'
             value={address}
             onChange={(e) => setAddress(e.target.value)}>
-            <option value='Minha casa'>Em minha residência</option>
-            <option value='Casa do Samuel'>Residência do Barbeiro</option>
+            <option value='Minha residência'>Em minha residência</option>
+            <option value='Residência do Barbeiro'>
+              Residência do Barbeiro
+            </option>
           </select>
 
           <label htmlFor='message'>Observações</label>
 
-          <textarea name='message' id='message' cols='30' rows='3'></textarea>
+          <textarea
+            onChange={(e) => setObservations(e.target.value)}
+            name='message'
+            id='message'
+            cols='30'
+            rows='3'></textarea>
           <br />
           <button className='book' onClick={whatsAppHandler}>
             Agendar

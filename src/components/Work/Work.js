@@ -1,6 +1,5 @@
 import React from 'react'
 import './Work.scss'
-import Barb from '../../images/mustache.png'
 import img1 from '../../images/work/1.jpeg'
 import img2 from '../../images/work/2.jpeg'
 import img3 from '../../images/work/3.jpeg'
@@ -15,7 +14,6 @@ const Work = () => {
   return (
     <div className='work' id='trabalhos'>
       <h1>Trabalhos</h1>
-      <img src={Barb} alt='' />
       <div className='row'>
         <div className='column'>
           <img src={img2} />
