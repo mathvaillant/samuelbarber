@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Footer.scss'
+import sr, { defaultScrollBottom } from '../../scrollReveal'
 
 import Machine from '../../images/machine.png'
 import emailjs from 'emailjs-com'
@@ -7,6 +8,10 @@ import { init } from 'emailjs-com'
 init('user_hEgn7VwEaikcA4ZnuQmJ1')
 
 const Footer = () => {
+  useEffect(() => {
+    defaultScrollBottom('.machine', sr)
+  })
+
   function sendEmail(e) {
     e.preventDefault()
 
@@ -61,8 +66,8 @@ const Footer = () => {
 
           <input type='submit' className='submitBtn'></input>
         </form>
-        <a target='_blank' href='https://matheusvaillant.netlify.app/'>
-          Made by MattVaillant - 2021
+        <a target='_blank' href='https://matheusvaillant.com'>
+          Made by Matheus Vaillant - 2021
         </a>
       </div>
     </>

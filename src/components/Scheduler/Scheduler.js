@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Scheduler.scss'
 import Barb from '../../images/mustache.png'
 import WhatsApp from '../../images/whatsapp.png'
 import DateTimePicker from 'react-datetime-picker'
-
+import sr, { defaultScrollLeft, defaultScrollTop } from '../../scrollReveal'
 import Scissors from '../../images/b4.png'
 
 const Scheduler = () => {
+  useEffect(() => {
+    defaultScrollLeft('.scissors', sr)
+    defaultScrollTop('.scheduler', sr)
+  })
+
   const [date, setDate] = useState(new Date())
   const [time, setTime] = useState('')
   const [name, setName] = useState('')
@@ -34,10 +39,10 @@ const Scheduler = () => {
     } else {
       let newTime = time
       let newDay = day
-      let newAddress = address
-      let Obs = observations !== '' ? 'Obs: ' + observations : null
+      let newAddress = address !== '' ? 'De preferência ' + address + '.' : ''
+      let Obs = observations !== '' ? 'Obs: ' + observations : ''
       let clientName = name
-      let message = `Olá Samuel, como está? Gostava de agendar um corte para o dia ${newDay} às ${newTime} horas. De preferência na ${newAddress}. Fico a aguardar uma confirmação, Obrigado! ${clientName}. ${Obs}`
+      let message = `Olá Samuel, como está? Gostava de agendar um corte para o dia ${newDay} às ${newTime} horas. ${newAddress} Fico a aguardar uma confirmação, Muito Obrigado! ${clientName}. ${Obs}`
       const location = window.location
       location.replace(
         `https://api.whatsapp.com/send?phone=+351963007246&text=${message}&source=&data=&app_absent=`
@@ -73,9 +78,9 @@ const Scheduler = () => {
             id='where'
             value={address}
             onChange={(e) => setAddress(e.target.value)}>
-            <option value='Minha residência'>Em minha residência</option>
-            <option value='Residência do Barbeiro'>
-              Residência do Barbeiro
+            <option value='Em minha residência'>Em minha residência</option>
+            <option value='Na Residência do Barbeiro'>
+              Na Residência do Barbeiro
             </option>
           </select>
 

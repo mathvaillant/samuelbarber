@@ -35,9 +35,14 @@
             text-decoration: underline solid 1px white;
           }
           img {
-            height: 20px;
-            width: 20px;
+            height: 30px;
+            width: 30px;
             border-radius: 50%;
+          }
+          img:hover {
+            height: 26px;
+            width: 26px;
+            border: rgb(212, 47, 253) solid 2px;
           }
         }
         span {

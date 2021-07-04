@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Logo from '../../images/altLogo.png'
-
+import sr, { defaultScrollTop } from '../../scrollReveal'
 import './Showcase.scss'
 
-const Showcase = () => {
-  return (
-    <div className='showcase'>
-      <img src={Logo} alt='' />
-    </div>
-  )
-}
+export default class Showcase extends Component {
+  componentDidMount = () => {
+    defaultScrollTop(this.refs.img, sr)
+  }
 
-export default Showcase
+  render() {
+    return (
+      <div className='showcase'>
+        <img src={Logo} alt='' ref='img' />
+      </div>
+    )
+  }
+}

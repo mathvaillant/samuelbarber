@@ -20,7 +20,9 @@ const Header = () => {
             <a href='#'>
               <img src={Facebook} alt='' />
             </a>
-            <a href='#'>
+            <a
+              target='_blank'
+              href='https://www.instagram.com/samuelrodrigues.pt/'>
               <img src={Instagram} alt='' />
             </a>
           </li>

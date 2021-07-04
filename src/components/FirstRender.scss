@@ -1,0 +1,16 @@
+.gifDiv {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+@media (max-width: 600px) {
+  .gifDiv {
+    img {
+      width: 100%;
+    }
+  }
+}
